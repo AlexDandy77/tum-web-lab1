@@ -206,6 +206,134 @@
             color: var(--text);
         }
 
+        .education-section {
+            width: min(960px, 100%);
+            display: grid;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .education-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: 0.4px;
+        }
+
+        .education-header::before {
+            content: '';
+            width: 5px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 3px;
+        }
+
+        .education-content {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 32px;
+        }
+
+        .timeline-item {
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid var(--card);
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7.5px;
+            top: 24px;
+            width: 1px;
+            height: calc(100% + 8px);
+            background: linear-gradient(180deg, var(--accent) 0%, rgba(47, 143, 111, 0.2) 100%);
+        }
+
+        .education-degree {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0 0 8px 0;
+        }
+
+        .education-institution {
+            font-size: 16px;
+            font-style: italic;
+            color: var(--muted);
+            margin: 0 0 12px 0;
+        }
+
+        .education-details {
+            display: grid;
+            gap: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .education-detail-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .education-detail-row strong {
+            color: var(--text);
+        }
+
+        .education-memory {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(63, 180, 138, 0.1), rgba(47, 143, 111, 0.05));
+            border-left: 4px solid var(--accent-2);
+            border: 1px solid rgba(63, 180, 138, 0.2);
+            border-left: 4px solid var(--accent-2);
+        }
+
+        .memory-label {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .memory-text {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 24px 12px;
@@ -321,6 +449,102 @@
                 <p>Very often in my career I was taking the role of a team leader within crews of people I was dealing with. Although it might not be easy and usually takes some time, I get pleasure from digging up the problems, understand their causes and implement solutions.</p>
 
                 <p>I have experience working in both Product and Development teams, but what I truly love the most is interacting with people and brainstorm on impactful decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="education-header">
+            <h2>Education & Training</h2>
+        </div>
+
+        <div class="education-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="education-degree">Bachelor of Science - English-taught Honors Program in Software Engineering (FAF)</h3>
+                    <p class="education-institution">Technical University of Moldova, Faculty of Computers, Informatics, and Microelectronics [01/09/2023 – Current]</p>
+                    <div class="education-details">
+                        <div class="education-detail-row">
+                            <span><strong>Address:</strong> 9/7, Studentilor Street, Chisinau (Moldova)</span>
+                        </div>
+                        <div class="education-detail-row">
+                            <span><strong>Website:</strong> <a href="https://utm.md" target="_blank" rel="noreferrer">utm.md</a></span>
+                            <span><strong>Field:</strong> Computer Science</span>
+                        </div>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Pleasant Memory</div>
+                        <p class="memory-text">Networking, new great environment, fun stories and memories from xFAF's, great time spending for self-improvement.</p>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Favourite Course</div>
+                        <p class="memory-text">Production Practice, Network Programming, Software Architecture - Loved exploring how to design scalable, user-friendly systems. Enjoyed creating useful applications that bring value to users.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="education-degree">IT Essentials</h3>
+                    <p class="education-institution">Cisco Networking Academy [23/06/2022 – 23/11/2022]</p>
+                    <div class="education-details">
+                        <div class="education-detail-row">
+                            <span><strong>City:</strong> Chisinau</span>
+                            <span><strong>Country:</strong> Moldova</span>
+                            <span><strong>Website:</strong> <a href="https://cisco.com" target="_blank" rel="noreferrer">cisco.com</a></span>
+                        </div>
+                        <div class="education-detail-row">
+                            <span><strong>Field:</strong> Information and Communication Technologies</span>
+                            <span><strong>Final grade:</strong> 12</span>
+                        </div>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Pleasant Memory</div>
+                        <p class="memory-text">Network troubleshooting Packet Tracer labs were fascinating - learning how data flows through networks opened my eyes to infrastructure complexity.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="education-degree">Junior IT Course</h3>
+                    <p class="education-institution">Step IT Academy [27/01/2019 – 14/01/2022]</p>
+                    <div class="education-details">
+                        <div class="education-detail-row">
+                            <span><strong>City:</strong> 139, Decebal boulevard, Chisinau</span>
+                            <span><strong>Country:</strong> Moldova</span>
+                            <span><strong>Website:</strong> <a href="https://itstep.md" target="_blank" rel="noreferrer">itstep.md</a></span>
+                        </div>
+                        <div class="education-detail-row">
+                            <span><strong>Field(s):</strong> Information and Communication Technologies • Computer use • Software and applications development</span>
+                            <span><strong>Final grade:</strong> 12</span>
+                        </div>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Favorite Course</div>
+                        <p class="memory-text">Python Programming - Building my first Telegram Bot from scratch was an exciting moment that sparked my passion for development.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="education-degree">Baccalaureate</h3>
+                    <p class="education-institution">Theoretical Lyceum "Academia Copiilor" [01/09/2011 – 31/05/2023]</p>
+                    <div class="education-details">
+                        <div class="education-detail-row">
+                            <span><strong>City:</strong> 16/3 Albisoara street, Chisinau</span>
+                            <span><strong>Country:</strong> Moldova</span>
+                            <span><strong>Website:</strong> <a href="https://academiacopiilor.md/" target="_blank" rel="noreferrer">academiacopiilor.md</a></span>
+                        </div>
+                        <div class="education-detail-row">
+                            <span><strong>Field(s):</strong> Humanitarian profile</span>
+                            <span><strong>Final grade:</strong> 9.16</span>
+                        </div>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Favorite Courses</div>
+                        <p class="memory-text">Mathematics and Physics classes taught me analytical thinking and how to articulate ideas - skills that became invaluable in tech.</p>
+                    </div>
+                    <div class="education-memory">
+                        <div class="memory-label">✨ Pleasant Memory</div>
+                        <p class="memory-text">Fun time with school friends and memorable events that shaped my early years.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
