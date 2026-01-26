@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexei Pavlovschii" />
     <title>Alexei Pavlovschii - CV/Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -334,6 +335,182 @@
             color: var(--text);
         }
 
+        .projects-section {
+            width: min(960px, 100%);
+            display: grid;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .projects-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .projects-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: 0.4px;
+        }
+
+        .projects-header::before {
+            content: '';
+            width: 5px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 3px;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 16px;
+            border: 1px solid rgba(47, 143, 111, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 24px 56px rgba(0, 0, 0, 0.12);
+            border-color: rgba(47, 143, 111, 0.16);
+        }
+
+        .project-header {
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .project-date {
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .project-link-label {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.08), rgba(63, 180, 138, 0.04));
+            border: 1px solid rgba(47, 143, 111, 0.14);
+            border-radius: 8px;
+            color: #0d67c2;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .project-link:hover {
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.12), rgba(63, 180, 138, 0.08));
+            border-color: rgba(47, 143, 111, 0.22);
+        }
+
+        .project-tech-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .tech-label {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.12), rgba(63, 180, 138, 0.06));
+            border: 1px solid rgba(47, 143, 111, 0.16);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .project-skills {
+            padding-top: 16px;
+            border-top: 1px solid rgba(47, 143, 111, 0.08);
+        }
+
+        .skills-label {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .skills-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        .skill-item {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 24px 12px;
@@ -543,6 +720,169 @@
                     <div class="education-memory">
                         <div class="memory-label">✨ Pleasant Memory</div>
                         <p class="memory-text">Fun time with school friends and memorable events that shaped my early years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="projects-header">
+            <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">BlockSign - Secure Document Notarization System</h3>
+                    <span class="project-date">[01/09/2025 – Current]</span>
+                </div>
+                <p class="project-description">A blockchain-powered application for creating, managing, and verifying digital documents. The system enables secure user registration, personal cabinet management, document signing, and blockchain-based integrity verification. Provides both mobile (iOS via TestFlight) and web-based interfaces.</p>
+                <div class="project-links">
+                    <span class="project-link-label">Links:</span>
+                    <a href="https://blocksign.md" target="_blank" rel="noreferrer" class="project-link">🌐 Website</a>
+                    <a href="https://testflight.apple.com/join/RQGC5qww" target="_blank" rel="noreferrer" class="project-link">📱 iOS TestFlight</a>
+                    <a href="https://github.com/AlexDandy77/BlockSign-Server" target="_blank" rel="noreferrer" class="project-link">⚙️ Backend</a>
+                    <a href="https://github.com/AlexDandy77/BlockSign-iOS" target="_blank" rel="noreferrer" class="project-link">📲 iOS App</a>
+                    <a href="https://github.com/NeValetik/BlockSign-FrontEnd" target="_blank" rel="noreferrer" class="project-link">💻 Frontend</a>
+                </div>
+                <div class="project-tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-list">
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Express</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Prisma ORM</span>
+                        <span class="tech-badge">Ed25519 Signatures</span>
+                        <span class="tech-badge">Polygon Blockchain</span>
+                        <span class="tech-badge">AWS S3</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">EC2</span>
+                    </div>
+                </div>
+                <div class="project-skills">
+                    <div class="skills-label">Key Skills</div>
+                    <div class="skills-list">
+                        <div class="skill-item">System Architecture & Integration with asynchronous job scheduling</div>
+                        <div class="skill-item">Full-Stack Security: JWT rotation, HMAC-OTP, CSP, Role-based access control</div>
+                        <div class="skill-item">Cloud Infrastructure: AWS S3, presigned URLs, server-side encryption</div>
+                        <div class="skill-item">Blockchain Integration: Polygon/Ethereum with Ethers.js</div>
+                        <div class="skill-item">Cryptographic Systems: Ed25519 signatures, BIP39 mnemonics, SHA-256 hashing</div>
+                        <div class="skill-item">DevOps & Containerization with Docker and AWS EC2</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">NEKTAR - DSL for Network Topologies with AR</h3>
+                    <span class="project-date">[17/02/2025 – 18/06/2025]</span>
+                </div>
+                <p class="project-description">The Networking Kit for Augmented Reality simplifies network topology design through a custom Domain-Specific Language (DSL). Features a web-based IDE, Cisco Packet Tracer file conversion, and native iOS app with AR visualization for enhanced network understanding.</p>
+                <div class="project-links">
+                    <span class="project-link-label">Links:</span>
+                    <a href="https://github.com/AlexDandy77/FAF-NEKTAR-PBL-SEM4" target="_blank" rel="noreferrer" class="project-link">📦 GitHub Repository</a>
+                </div>
+                <div class="project-tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-list">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">React Flow</span>
+                        <span class="tech-badge">SwiftUI</span>
+                        <span class="tech-badge">ARKit</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">AWS EC2/RDS</span>
+                        <span class="tech-badge">JWT Auth</span>
+                    </div>
+                </div>
+                <div class="project-skills">
+                    <div class="skills-label">Key Skills</div>
+                    <div class="skills-list">
+                        <div class="skill-item">Domain-Specific Language (DSL) design with custom lexer and parser using pyparsing</div>
+                        <div class="skill-item">Full-Stack Development: Python/Flask backend, React frontend, SwiftUI iOS app</div>
+                        <div class="skill-item">Augmented Reality Development with ARKit for iOS</div>
+                        <div class="skill-item">RESTful API Design and JWT authentication</div>
+                        <div class="skill-item">System Architecture & integration between web, mobile, and backend components</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Armis Asset Data Pipeline</h3>
+                    <span class="project-date">[02/07/2025 – 30/07/2025]</span>
+                </div>
+                <p class="project-description">A scalable data engineering pipeline that ingests asset data from multiple sources (Qualys, CrowdStrike APIs), normalizes into a unified model, deduplicates records, and stores in MongoDB. Includes data analysis module and key visualizations.</p>
+                <div class="project-links">
+                    <span class="project-link-label">Links:</span>
+                    <a href="https://github.com/AlexDandy77/ArmisAssigment" target="_blank" rel="noreferrer" class="project-link">📦 GitHub Repository</a>
+                </div>
+                <div class="project-tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-list">
+                        <span class="tech-badge">Python 3.10+</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Matplotlib</span>
+                        <span class="tech-badge">Seaborn</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Requests</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">EduGate - Smart Attendance System</h3>
+                    <span class="project-date">[02/09/2024 – 18/01/2025]</span>
+                </div>
+                <p class="project-description">An automated student attendance tracking solution integrating NFC card scanning and facial recognition. Ensures secure entry/exit logging with MongoDB database storage. Features role-based dashboards for teachers, admins, and parents with attendance analytics.</p>
+                <div class="project-links">
+                    <span class="project-link-label">Links:</span>
+                    <a href="https://github.com/alexandru-bujor/EduGate_Project" target="_blank" rel="noreferrer" class="project-link">📦 GitHub Repository</a>
+                </div>
+                <div class="project-tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-list">
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">NFC</span>
+                        <span class="tech-badge">HTML/JavaScript</span>
+                        <span class="tech-badge">Bootstrap</span>
+                        <span class="tech-badge">Argon2</span>
+                    </div>
+                </div>
+                <div class="project-skills">
+                    <div class="skills-label">Key Skills</div>
+                    <div class="skills-list">
+                        <div class="skill-item">Backend Development with Flask APIs and database management</div>
+                        <div class="skill-item">Facial Recognition & Image Processing with OpenCV</div>
+                        <div class="skill-item">Hardware Integration with NFC module</div>
+                        <div class="skill-item">Security & Authentication with Argon2 password hashing</div>
+                        <div class="skill-item">System design and team management skills</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Winter FAF Hackathon 2024</h3>
+                    <span class="project-date">[22/12/2024 – 23/12/2024]</span>
+                </div>
+                <p class="project-description">24-hour hackathon team project (5 members) that achieved 2nd place. Built a fullstack application generating optimal travel paths for Santa Claus visiting multiple locations. Practiced algorithms, frontend, and backend development under tight constraints.</p>
+                <div class="project-tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-list">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">Algorithms</span>
                     </div>
                 </div>
             </div>
