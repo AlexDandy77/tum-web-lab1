@@ -79,6 +79,17 @@
             margin: 0;
         }
 
+        .name a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .name a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
         .meta {
             display: flex;
             flex-wrap: wrap;
@@ -510,6 +521,137 @@
             font-weight: 700;
         }
 
+        .skills-languages-section {
+            width: min(960px, 100%);
+            display: grid;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: 0.4px;
+        }
+
+        .section-header::before {
+            content: '';
+            width: 5px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 3px;
+        }
+
+        .skills-card, .languages-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(47, 143, 111, 0.12);
+        }
+
+        .skills-category {
+            display: grid;
+            gap: 12px;
+        }
+
+        .category-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.1), rgba(63, 180, 138, 0.05));
+            border: 1px solid rgba(47, 143, 111, 0.14);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.16), rgba(63, 180, 138, 0.08));
+            border-color: rgba(47, 143, 111, 0.22);
+        }
+
+        .language-item {
+            display: grid;
+            gap: 8px;
+            padding: 16px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(47, 143, 111, 0.04), rgba(63, 180, 138, 0.02));
+            border: 1px solid rgba(47, 143, 111, 0.08);
+        }
+
+        .language-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .language-level {
+            font-size: 14px;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .footer {
+            width: 100%;
+            background: var(--card);
+            margin-top: 48px;
+            padding: 32px 16px;
+            text-align: center;
+            box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        .footer-content {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .footer-highlight {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 24px 12px;
@@ -539,7 +681,7 @@
 
         <section>
             <header class="header">
-                <h1 class="name">Alexei Pavlovschii</h1>
+                <h1 class="name"><a href="https://www.linkedin.com/in/alexei-pavlovschii-527908170/" target="_blank" rel="noreferrer">Alexei Pavlovschii</a></h1>
                 <div class="meta">
                     <span><strong>Country:</strong> Republic of Moldova</span>
                     <span><strong>Date of birth:</strong> 15/02/2005</span>
@@ -887,6 +1029,109 @@
             </div>
         </div>
     </section>
+
+    <section class="skills-languages-section">
+        <div class="section-header">
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skills-card">
+            <h3 class="card-title">Technical Skills</h3>
+            
+            <div class="skills-category">
+                <div class="category-title">Development & Tools</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Swift</span>
+                    <span class="skill-tag">SwiftUI</span>
+                    <span class="skill-tag">Xcode</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">HTML/CSS/JS</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="category-title">Backend & Infrastructure</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Amazon Web Services</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">System Administration</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="category-title">Project & Collaboration</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Jira</span>
+                    <span class="skill-tag">Confluence</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Quality Assurance</span>
+                    <span class="skill-tag">Data Science</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="category-title">Creative & Office</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Microsoft Office</span>
+                    <span class="skill-tag">Adobe Illustrator</span>
+                    <span class="skill-tag">Adobe Photoshop</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="category-title">Soft Skills</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Analytical Thinking</span>
+                    <span class="skill-tag">Critical Thinking</span>
+                    <span class="skill-tag">Problem-Solving</span>
+                    <span class="skill-tag">Time Management</span>
+                    <span class="skill-tag">Communication</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Languages</h2>
+        </div>
+
+        <div class="languages-card">
+            <div class="language-item">
+                <div class="language-name">English</div>
+                <div class="language-level">Full professional proficiency</div>
+            </div>
+
+            <div class="language-item">
+                <div class="language-name">German</div>
+                <div class="language-level">Professional working proficiency</div>
+            </div>
+
+            <div class="language-item">
+                <div class="language-name">Romanian</div>
+                <div class="language-level">Native or bilingual proficiency</div>
+            </div>
+
+            <div class="language-item">
+                <div class="language-name">Russian</div>
+                <div class="language-level">Native or bilingual proficiency</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2026 <span class="footer-highlight">Alexei Pavlovschii</span>. All rights reserved.</p>
+            <p class="footer-text">Built with passion for clean code and user experience.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
